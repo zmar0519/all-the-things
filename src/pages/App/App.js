@@ -4,6 +4,7 @@ import './App.css';
 import ManliestThings from '../ManliestThings/ManliestThings'
 import FunctionalThings from '../FunctionalThings/FunctionalThings'
 import StyledThings from '../StyledThings/StyledThings'
+import CookingThings from '../CookingThings/CookingThings';
 
 class App extends Component {
   state = { 
@@ -72,7 +73,19 @@ class App extends Component {
         image: "https://i.imgur.com/gRxOxsA.jpg", 
         attributes: ["makes you live a long time", "consistent poops", "probably tacos sometimes!", "farm to market"], 
       },
-    ] 
+    ],
+    dylansThings: [
+      {
+        name: "Cooking Things",
+        image: "https://en.pimg.jp/033/367/357/1/33367357.jpg",  
+        attributes: ["tasty", "ingredients", "could be a taco", "yummo"],
+      },
+      {
+        name: "Cooking Pans",
+        image: "https://image.shutterstock.com/image-vector/close-frying-pan-wooden-handle-260nw-263535851.jpg",
+        attributes: ["saute", "skillet", "taco warmer", "cast-iron"], 
+      },
+    ]
   } 
   render() {
     return (
@@ -84,6 +97,7 @@ class App extends Component {
             <Link to="/the-manliest-things">Ben's Things</Link><br/>
             <Link to="/the-functional-things">Shahzad's Things</Link><br/>
             <Link to="/the-well-styled-things">David's Things</Link><br/>
+            <Link to="/the-cooking-things">Dylan's Things</Link>
           </>
         </Route>
         {/* All the <Route> components should live here */}
@@ -95,6 +109,9 @@ class App extends Component {
         </Route>
         <Route exact path='/the-well-styled-things'>
           <StyledThings things={this.state.davidsThings} />
+        </Route>
+        <Route exact path="/the-cooking-things">
+          <CookingThings things={this.state.dylansThings} />
         </Route>
       </>
       
