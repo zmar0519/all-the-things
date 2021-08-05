@@ -76,9 +76,9 @@ class App extends Component {
     ],
       summersThings: [
       {
-        name: "functional programming",
+        name: "what name",
         image: "https://imgs.xkcd.com/comics/functional.png",  
-        attributes: ["efficient", "reusability", "not a taco", "beautiful"],
+        attributes: ["crative", "confused", "but still", "beautiful"],
       },
       {
         name: "React hooks",
