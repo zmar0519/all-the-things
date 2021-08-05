@@ -4,7 +4,11 @@ import './App.css';
 import ManliestThings from '../ManliestThings/ManliestThings'
 import FunctionalThings from '../FunctionalThings/FunctionalThings'
 import StyledThings from '../StyledThings/StyledThings'
+
 import SummersThings from "../SummersThings/SummersThings";
+
+import CookingThings from '../CookingThings/CookingThings';
+
 
 class App extends Component {
   state = { 
@@ -74,6 +78,7 @@ class App extends Component {
         attributes: ["makes you live a long time", "consistent poops", "probably tacos sometimes!", "farm to market"], 
       },
     ],
+
       summersThings: [
       {
         name: "what name",
@@ -86,6 +91,20 @@ class App extends Component {
         attributes: ["useEffect", "useState", "not a taco", "state's best friend"], 
       },
     ],
+
+    dylansThings: [
+      {
+        name: "Cooking Things",
+        image: "https://en.pimg.jp/033/367/357/1/33367357.jpg",  
+        attributes: ["tasty", "ingredients", "could be a taco", "yummo"],
+      },
+      {
+        name: "Cooking Pans",
+        image: "https://image.shutterstock.com/image-vector/close-frying-pan-wooden-handle-260nw-263535851.jpg",
+        attributes: ["saute", "skillet", "taco warmer", "cast-iron"], 
+      },
+    ]
+
   } 
   render() {
     return (
@@ -94,6 +113,7 @@ class App extends Component {
           <>
             {/* All the <a> tags should live here */}
             <h1>All-The-Things</h1>
+
             <Link to="/the-manliest-things">Ben's Things</Link>
             <br />
             <Link to="/the-functional-things">Shahzad's Things</Link>
@@ -106,6 +126,8 @@ class App extends Component {
             <br />
             <Link to="/summers-things">Summer's Things</Link>
             <br />
+            <Link to="/the-cooking-things">Dylan's Things</Link>
+
           </>
         </Route>
         {/* All the <Route> components should live here */}
@@ -118,8 +140,12 @@ class App extends Component {
         <Route exact path="/the-well-styled-things">
           <StyledThings things={this.state.davidsThings} />
         </Route>
+
         <Route exact path="/summers-things">
           <SummersThings things={this.state.summersThings} />
+        </Route>
+        <Route exact path="/the-cooking-things">
+          <CookingThings things={this.state.dylansThings} />
         </Route>
       </>
     );

@@ -7,16 +7,16 @@ Each member of your team should add the following items to this project, followi
 1. A piece of state to the state object in `App.js`. For example:
 
     ```javascript
-    shahzadsThings: [
+    dylansThings: [
       {
-        name: "functional programming",
-        image: "https://imgs.xkcd.com/comics/functional.png",  
-        attributes: ["efficient", "reusability", "not a taco", "beautiful"],
+        name: "Cooking Things",
+        image: "https://en.pimg.jp/033/367/357/1/33367357.jpg",  
+        attributes: ["tasty", "ingredients", "could be a taco", "yummo"],
       },
       {
-        name: "React hooks",
-        image: "https://images.unsplash.com/photo-1518644730709-0835105d9daa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-        attributes: ["useEffect", "useState", "not a taco", "state's best friend"], 
+        name: "Cooking Pans",
+        image: "https://image.shutterstock.com/image-vector/close-frying-pan-wooden-handle-260nw-263535851.jpg",
+        attributes: ["saute", "skillet", "taco warmer", "cast-iron"], 
       },
       ...
     ]
@@ -29,7 +29,7 @@ Each member of your team should add the following items to this project, followi
     import ThingCard from '../../components/ThingCard/ThingCard'
     import { Link } from 'react-router-dom'
 
-    const StyledThings = (props) => {
+    const CookingThings = (props) => {
       return (
         <>
           <Link to="/">Home</Link>
@@ -41,7 +41,7 @@ Each member of your team should add the following items to this project, followi
       )
     }
 
-    export default StyledThings
+    export default CookingThings
     ```
 
 3. Add a link to your new component inside of `App.jsx` alongside the existing links:
