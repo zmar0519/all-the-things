@@ -85,6 +85,19 @@ class App extends Component {
         image: "https://image.shutterstock.com/image-vector/close-frying-pan-wooden-handle-260nw-263535851.jpg",
         attributes: ["saute", "skillet", "taco warmer", "cast-iron"], 
       },
+    ],
+    zacksThings: [
+      {
+        name: "Cheetos",
+        image: "https://i.insider.com/5f10b52519182471f4679cb9?width=700",  
+        attributes: ["tasty", "nutrious", "orange", "dusty"],
+      },
+      {
+        name: "water",
+        image: "https://www.aces.edu/wp-content/uploads/2020/06/A-Glass-of-water-on-white-background-1161576130_5760x3840-scaled-e1593446976432.jpeg",
+        attributes: ["wet", "quenching", "not taco"], 
+      },
+      ...
     ]
   } 
   render() {
@@ -98,6 +111,7 @@ class App extends Component {
             <Link to="/the-functional-things">Shahzad's Things</Link><br/>
             <Link to="/the-well-styled-things">David's Things</Link><br/>
             <Link to="/the-cooking-things">Dylan's Things</Link>
+            <Link to="/the-cool-things">Zack's Things</Link>
           </>
         </Route>
         {/* All the <Route> components should live here */}
@@ -112,6 +126,9 @@ class App extends Component {
         </Route>
         <Route exact path="/the-cooking-things">
           <CookingThings things={this.state.dylansThings} />
+        </Route>
+        <Route exact path="/cool-things">
+          <CoolThings things={this.state.zacksThings} />
         </Route>
       </>
       
